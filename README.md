@@ -40,7 +40,17 @@ Please feel free [submit an issue](https://www.github.com/noahc3/sdsetup/issues)
 * Any other issue with the site or it's packages
 
 ## Build
+### Windows
 Clone the repository and open the solution in Visual Studio. Build from there.
+
+### Mono on GNU/Linux
+Clone the repository and run `nuget restore` then run `msbuild`(debug build).
+If you want a release build, run `msbuild /t:build /p:Configuration=Release` instead of `msbuild`.
+```bash
+git clone https://github.com/noahc3/SDSetup.git
+nuget restore  # Or `mono /path/to/nuget.exe`
+msbuild #/t:build /p:Configuration=Release
+```
 
 ## Included Projects
 * **SDSetup Blazor:** The web application itself, written in C# (and a little bit of JavaScript).
